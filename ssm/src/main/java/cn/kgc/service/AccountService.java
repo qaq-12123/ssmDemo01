@@ -1,6 +1,6 @@
 package cn.kgc.service;
 
-import cn.kgc.domain.Account;
+import cn.kgc.domain.User;
 
 import java.util.List;
 
@@ -9,16 +9,16 @@ import java.util.List;
  */
 public interface AccountService {
     //查询所有账户信息
-     List<Account> findAll();
+     List<User> findAll();
 
     //查询所有账户信息
-     Account findAllByName(String name);
+    User findAllByName(String name);
 
     //保存账户信息
-     int saveAccount(Account account);
+     int saveAccount(User user);
 
     //更新账户信息
-     int updateAccount(Account account);
+     int updateAccount(User user);
 
      //删除信息
      public int delAccount(String name);

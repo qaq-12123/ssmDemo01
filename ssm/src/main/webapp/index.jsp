@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="account/findAll">查询所有</a>
+    <a href="http://localhost:8080/account/findAll">查询所有</a>
     <form action="/account/saveAccount" method="get">
         <input type="text" name="name"><br/>
         <input type="text" name="money"><br/>
