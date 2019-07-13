@@ -37,8 +37,10 @@
     <h3>查询成功！</h3></br>
     <c:forEach items="${list}" var="account">
         ${account.name}
+        ${account.id}
         ${account.money}
         <a href="/account/delAccount?name=${account.name}">删除</a>
+        <a href="update.jsp?name=${account.name}">修改</a>
     </c:forEach>
     ${result}</br>
     <a href="../../index.jsp">返回上一页</a></br>
