@@ -14,7 +14,7 @@
         $(function () {
             $("#btn").click(function () {
                 $.ajax({
-                    url:"http://qaq12123.in.8866.org:30102/account/findAllCityMap",
+                    url:"http://qaq12123.in.8866.org:30102/city/findAllCityMap",
                     contentType:"application/json;charset=UTF-8",
                     dataType:"json",
                     type:"post",
@@ -36,11 +36,11 @@
     <button  type="button" id="btn">查询所有</button>
     <div id="btx">
     </div>
-    <a href="http://qaq12123.in.8866.org:30102/account/findOrder">订单</a>
-    <a href="http://qaq12123.in.8866.org:30102/account/findAllCity">城市</a>
+    <a href="http://qaq12123.in.8866.org:30102/city/findOrder">订单</a>
+    <a href="http://qaq12123.in.8866.org:30102/city/findAllCity">城市</a>
 
-    <a href="http://qaq12123.in.8866.org:30102/account/findAllCityMap">哈哈</a>
-    <a href="http://qaq12123.in.8866.org:30102/account/findOrderList">哈哈</a>
+    <a href="http://qaq12123.in.8866.org:30102/city/findAllCityMap">哈哈</a>
+    <a href="http://qaq12123.in.8866.org:30102/city/findOrderList">哈哈</a>
     <form action="/account/saveAccount" method="get">
         <input type="text" name="name"><br/>
         <input type="text" name="money"><br/>
