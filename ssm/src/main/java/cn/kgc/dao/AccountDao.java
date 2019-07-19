@@ -1,9 +1,11 @@
 package cn.kgc.dao;
 
-import cn.kgc.domain.User;
+import cn.kgc.domain.City;
+import cn.kgc.domain.Orders;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,23 +15,11 @@ import java.util.List;
  */
 @Repository
 public interface AccountDao {
-    //查询所有账户信息
-    @Select("select *  from user")
-     public List<User> findAll();
+    //查询所有城市
+    @Select("select * from city")
+     public List<City> findAllCity();
 
-    //保存账户信息
-    @Insert("insert into account (name,money) values (#{name},#{money})")
-    public int saveAccount(User user);
-
-    //更新账户信息
-    @Insert("update account set money=#{money} where name =#{name}")
-    public  int updateAccount(User user);
-
-    //查询账户  byname
-    @Select("select * from account where name =#{name}")
-    public User findAccountByName(String name);
-
-    //删除账户
-    @Delete("delete from account where name =#{name}")
-    public int delAccount(String name);
+    //查询订单信息
+    @Select("select * from `order` o,vehicle v where o.vid=v.id ")
+    public List<Orders> findAllOrders();
 }

@@ -15,18 +15,18 @@ http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!--开启注解扫描-->
-    <context:component-scan base-package="cn.kgc">
+    <context:component-scan base-package="cn.kgc" >
         <!--扫描除了该类之外的注解-->
-        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 
     <!--spring整合Mybatis框架-->
     <!--配置连接池-->
     <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost/ssm"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://172.25.1.66/carrent?characterEncoding=utf8"></property>
         <property name="user" value="root"></property>
-        <property name="password" value="123456"></property>
+        <property name="password" value="root"></property>
     </bean>
     <!--配置sqlfactory工厂-->
     <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">

@@ -9,9 +9,38 @@
 <html>
 <head>
     <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $.ajax({
+                    url:"http://qaq12123.in.8866.org:30102/account/findAllCityMap",
+                    contentType:"application/json;charset=UTF-8",
+                    dataType:"json",
+                    type:"post",
+                    success:function (data) {
+                            for (var key in data){
+                            var d = data[key][0];
+                            for(var i=1; i<data[key].length;i++){
+                                d = d+"、"+data[key][i]
+                            }
+                            $("#btx").append(key+" : "+d+"</br>")
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <a href="http://localhost:8080/account/findAll">查询所有</a>
+    <button  type="button" id="btn">查询所有</button>
+    <div id="btx">
+    </div>
+    <a href="http://qaq12123.in.8866.org:30102/account/findOrder">订单</a>
+    <a href="http://qaq12123.in.8866.org:30102/account/findAllCity">城市</a>
+
+    <a href="http://qaq12123.in.8866.org:30102/account/findAllCityMap">哈哈</a>
+    <a href="http://qaq12123.in.8866.org:30102/account/findOrderList">哈哈</a>
     <form action="/account/saveAccount" method="get">
         <input type="text" name="name"><br/>
         <input type="text" name="money"><br/>
