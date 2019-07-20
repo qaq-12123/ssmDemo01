@@ -13,16 +13,20 @@ import java.util.List;
 public class CarrentServiceImpl implements CarrentService {
     @Autowired
     CarrentDao carrentDao;
+
+    //    查询金额表costinfo所有数据
     @Override
     public List<Costinfo> findAllCostinfo() {
         return carrentDao.findAllCostinfo();
     }
 
+    //    查询订单表order所有数据
     @Override
     public List<Order> findAllOrder() {
         return carrentDao.findAllOrder();
     }
 
+    //    查询车辆信息表vehicle所有数据
     @Override
     public List<Vehicle> findAllVehicle() {
         return carrentDao.findAllVehicle();

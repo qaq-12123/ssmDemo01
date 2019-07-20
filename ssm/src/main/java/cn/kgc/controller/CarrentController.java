@@ -19,6 +19,7 @@ public class CarrentController {
     @Autowired
     CarrentService carrentService;
 
+    //    查询订单表order所有数据
     @RequestMapping("/findAllOrder")
     @ResponseBody
     public List findAllOrder(){
@@ -26,6 +27,7 @@ public class CarrentController {
         return orders;
     }
 
+    //    查询车辆信息表vehicle所有数据
     @RequestMapping("/findAllVehicle")
     @ResponseBody
     public List findAllVehicle(){
@@ -33,6 +35,7 @@ public class CarrentController {
         return vehicles;
     }
 
+    //    查询金额表costinfo所有数据
     @RequestMapping("/findAllCostinfo")
     @ResponseBody
     public List findAllCostinfo(){
