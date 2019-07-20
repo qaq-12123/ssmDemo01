@@ -106,7 +106,7 @@ public class VehicleController {
         arrayList.add(vehicleService.findAllzhong());
         return arrayList;
     }
-	//suv
+	//suv型
     @RequestMapping("findAllVehiclesuv")
     @ResponseBody
     public List findAllVehiclejing(){
