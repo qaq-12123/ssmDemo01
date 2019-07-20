@@ -19,6 +19,7 @@ import java.util.List;
 public class PinglunController {
     @Autowired
     private PinglunService pinglunService;
+	//展示所有评论
     @RequestMapping("findAll")
     @ResponseBody
     public List findAll(){
@@ -26,6 +27,7 @@ public class PinglunController {
         arrayList.add(pinglunService.findAll());
         return arrayList;
     }
+	//提交评论内容
     @RequestMapping("/pinglun")
     @ResponseBody
     public boolean pinglun(Pinglun pinglun){

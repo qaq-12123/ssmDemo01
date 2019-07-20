@@ -11,10 +11,10 @@ import java.util.List;
  * @date 2019/7/18  16:42
  */
 public interface PinglunDao {
-
+//查询评论
     @Select("select * from pinglun")
     public List<Pinglun> findAll();
-
+//提交评论
     @Insert("insert into pinglun values(null,#{head},#{name},#{time},#{fen},#{content})")
     public int ping(Pinglun pinglun);
 
